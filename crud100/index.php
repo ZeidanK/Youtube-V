@@ -41,7 +41,7 @@
     <tbody>
       <?php
         include "connection.php";
-        $sql = "select * from crud2";
+        $sql = "select * from crud100";
         $result = $conn->query($sql);
         if(!$result){
           die("Invalid query!");
@@ -50,7 +50,7 @@
           echo "
       <tr>
         <th>$row[id]</th>
-        <td>$row[name]</td>
+        <td><a href= 'guestlist.php?id={$row['name']}'>$row[name]</a></td>
         <td>$row[email]</td>
         <td>$row[phone]</td>
         <td>$row[join_date]</td>
